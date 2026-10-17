@@ -1,0 +1,12 @@
+features 3061 76 s
+species trivial_duration_peakfreq {'day5fold': {'majority': 0.5, 'LR': 0.581, 'RF': 0.619}, 'NorthBc->WVanIsl': {'majority': 0.5, 'LR': 0.537, 'RF': 0.644}, 'WVanIsl->NorthBc': {'majority': 0.5, 'LR': 0.566, 'RF': 0.651}} dep 0.859
+species baseline003 {'day5fold': {'majority': 0.5, 'LR': 0.636, 'RF': 0.617}, 'NorthBc->WVanIsl': {'majority': 0.5, 'LR': 0.5, 'RF': 0.577}, 'WVanIsl->NorthBc': {'majority': 0.5, 'LR': 0.5, 'RF': 0.619}} dep 0.998
+species call_AUTOband {'day5fold': {'majority': 0.5, 'LR': 0.798, 'RF': 0.78}, 'NorthBc->WVanIsl': {'majority': 0.5, 'LR': 0.78, 'RF': 0.7}, 'WVanIsl->NorthBc': {'majority': 0.5, 'LR': 0.725, 'RF': 0.763}} dep 0.552
+species baseline+call_AUTOband {'day5fold': {'majority': 0.5, 'LR': 0.751, 'RF': 0.722}, 'NorthBc->WVanIsl': {'majority': 0.5, 'LR': 0.501, 'RF': 0.788}, 'WVanIsl->NorthBc': {'majority': 0.5, 'LR': 0.514, 'RF': 0.74}} dep 0.998
+species call_LABELLEDband__LEAK {'day5fold': {'majority': 0.5, 'LR': 0.714, 'RF': 0.68}, 'NorthBc->WVanIsl': {'majority': 0.5, 'LR': 0.728, 'RF': 0.688}, 'WVanIsl->NorthBc': {'majority': 0.5, 'LR': 0.668, 'RF': 0.656}} dep 0.551
+ecotype trivial_duration_peakfreq {'day5fold': {'majority': 0.333, 'LR': 0.256, 'RF': 0.358}, 'NorthBc->WVanIsl': {'majority': 0.333, 'LR': 0.296, 'RF': 0.309}, 'WVanIsl->NorthBc': {'majority': 0.333, 'LR': 0.325, 'RF': 0.319}} dep 0.872
+ecotype baseline003 {'day5fold': {'majority': 0.333, 'LR': 0.415, 'RF': 0.353}, 'NorthBc->WVanIsl': {'majority': 0.333, 'LR': 0.338, 'RF': 0.366}, 'WVanIsl->NorthBc': {'majority': 0.333, 'LR': 0.441, 'RF': 0.386}} dep 1.0
+ecotype call_AUTOband {'day5fold': {'majority': 0.333, 'LR': 0.436, 'RF': 0.477}, 'NorthBc->WVanIsl': {'majority': 0.333, 'LR': 0.421, 'RF': 0.463}, 'WVanIsl->NorthBc': {'majority': 0.333, 'LR': 0.445, 'RF': 0.503}} dep 0.583
+ecotype baseline+call_AUTOband {'day5fold': {'majority': 0.333, 'LR': 0.445, 'RF': 0.422}, 'NorthBc->WVanIsl': {'majority': 0.333, 'LR': 0.336, 'RF': 0.374}, 'WVanIsl->NorthBc': {'majority': 0.333, 'LR': 0.465, 'RF': 0.428}} dep 1.0
+ecotype call_LABELLEDband__LEAK {'day5fold': {'majority': 0.333, 'LR': 0.408, 'RF': 0.422}, 'NorthBc->WVanIsl': {'majority': 0.333, 'LR': 0.433, 'RF': 0.471}, 'WVanIsl->NorthBc': {'majority': 0.333, 'LR': 0.449, 'RF': 0.405}} dep 0.524
+done 262 s

@@ -1,0 +1,2926 @@
+{
+ "n_events": 3061,
+ "band_auto_median_hz": [
+  289.0625,
+  3179.6875
+ ],
+ "local_bg_fallback_frac": 0.0,
+ "results": {
+  "species": {
+   "n": 3030,
+   "counts": {
+    "KW": 2468,
+    "HW": 562
+   },
+   "featuresets": {
+    "trivial_duration_peakfreq": {
+     "n_features": 2,
+     "leaks_annotator_info": false,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8145214521452145,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8145214521452145,
+          "recall": 1.0,
+          "n": 2468
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.5814532781164745,
+        "macro_recall": 0.5814532781164745,
+        "accuracy": 0.5610561056105611,
+        "per_class": {
+         "HW": {
+          "precision": 0.2366255144032922,
+          "recall": 0.6138790035587188,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8619592875318066,
+          "recall": 0.5490275526742301,
+          "n": 2468
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.6190101628243654,
+        "macro_recall": 0.6190101628243654,
+        "accuracy": 0.6983498349834983,
+        "per_class": {
+         "HW": {
+          "precision": 0.3057395143487859,
+          "recall": 0.4928825622775801,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.865819209039548,
+          "recall": 0.7451377633711507,
+          "n": 2468
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.7806155861165684,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.7806155861165684,
+          "recall": 1.0,
+          "n": 1192
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.5365709205649605,
+        "macro_recall": 0.5365709205649605,
+        "accuracy": 0.2999345121152587,
+        "per_class": {
+         "HW": {
+          "precision": 0.23328488372093023,
+          "recall": 0.9582089552238806,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.9072847682119205,
+          "recall": 0.11493288590604027,
+          "n": 1192
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.6436391866172493,
+        "macro_recall": 0.6436391866172493,
+        "accuracy": 0.5893909626719057,
+        "per_class": {
+         "HW": {
+          "precision": 0.3147208121827411,
+          "recall": 0.7402985074626866,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.8822733423545331,
+          "recall": 0.5469798657718121,
+          "n": 1192
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8489687292082502,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.8489687292082502,
+          "recall": 1.0,
+          "n": 1276
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.565720243602668,
+        "macro_recall": 0.565720243602668,
+        "accuracy": 0.5362608117099135,
+        "per_class": {
+         "HW": {
+          "precision": 0.18498659517426275,
+          "recall": 0.6079295154185022,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.8824306472919419,
+          "recall": 0.5235109717868338,
+          "n": 1276
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.6505858754643503,
+        "macro_recall": 0.6505858754643503,
+        "accuracy": 0.7418496340652029,
+        "per_class": {
+         "HW": {
+          "precision": 0.2972292191435768,
+          "recall": 0.5198237885462555,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.9014466546112115,
+          "recall": 0.7813479623824452,
+          "n": 1276
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 0.8591186977714511,
+      "macro_recall": 0.8591186977714511,
+      "accuracy": 0.8587458745874588,
+      "per_class": {
+       "NorthBc": {
+        "precision": 0.8259551243177683,
+        "recall": 0.906187624750499,
+        "n": 1503
+       },
+       "WVanIsl": {
+        "precision": 0.8979000724112962,
+        "recall": 0.8120497707924034,
+        "n": 1527
+       }
+      }
+     }
+    },
+    "baseline003": {
+     "n_features": 22,
+     "leaks_annotator_info": false,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8145214521452145,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8145214521452145,
+          "recall": 1.0,
+          "n": 2468
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.6360380846363705,
+        "macro_recall": 0.6360380846363705,
+        "accuracy": 0.6801980198019802,
+        "per_class": {
+         "HW": {
+          "precision": 0.30488974113135187,
+          "recall": 0.5658362989323843,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8772018117765475,
+          "recall": 0.7062398703403565,
+          "n": 2468
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.6172625261712914,
+        "macro_recall": 0.6172625261712914,
+        "accuracy": 0.8231023102310231,
+        "per_class": {
+         "HW": {
+          "precision": 0.5433333333333333,
+          "recall": 0.2900355871886121,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8538461538461538,
+          "recall": 0.9444894651539708,
+          "n": 2468
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.7806155861165684,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.7806155861165684,
+          "recall": 1.0,
+          "n": 1192
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.21938441388343158,
+        "per_class": {
+         "HW": {
+          "precision": 0.21938441388343158,
+          "recall": 1.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 1192
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.5772287889412,
+        "macro_recall": 0.5772287889412,
+        "accuracy": 0.4086444007858546,
+        "per_class": {
+         "HW": {
+          "precision": 0.25432525951557095,
+          "recall": 0.8776119402985074,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.889487870619946,
+          "recall": 0.27684563758389263,
+          "n": 1192
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8489687292082502,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.8489687292082502,
+          "recall": 1.0,
+          "n": 1276
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.5003918495297806,
+        "macro_recall": 0.5003918495297806,
+        "accuracy": 0.15169660678642716,
+        "per_class": {
+         "HW": {
+          "precision": 0.1511318242343542,
+          "recall": 1.0,
+          "n": 227
+         },
+         "KW": {
+          "precision": 1.0,
+          "recall": 0.0007836990595611285,
+          "n": 1276
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.6190532086779998,
+        "macro_recall": 0.6190532086779998,
+        "accuracy": 0.6114437791084497,
+        "per_class": {
+         "HW": {
+          "precision": 0.2223950233281493,
+          "recall": 0.6299559471365639,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.9023255813953488,
+          "recall": 0.6081504702194357,
+          "n": 1276
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 0.9983366600133068,
+      "macro_recall": 0.9983366600133068,
+      "accuracy": 0.9983498349834984,
+      "per_class": {
+       "NorthBc": {
+        "precision": 1.0,
+        "recall": 0.9966733200266135,
+        "n": 1503
+       },
+       "WVanIsl": {
+        "precision": 0.9967362924281984,
+        "recall": 1.0,
+        "n": 1527
+       }
+      }
+     }
+    },
+    "call_AUTOband": {
+     "n_features": 27,
+     "leaks_annotator_info": false,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8145214521452145,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8145214521452145,
+          "recall": 1.0,
+          "n": 2468
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.7975437918524371,
+        "macro_recall": 0.7975437918524371,
+        "accuracy": 0.8112211221122112,
+        "per_class": {
+         "HW": {
+          "precision": 0.4943310657596372,
+          "recall": 0.7758007117437722,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.9413407821229051,
+          "recall": 0.8192868719611021,
+          "n": 2468
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.7799066485173928,
+        "macro_recall": 0.7799066485173928,
+        "accuracy": 0.8798679867986798,
+        "per_class": {
+         "HW": {
+          "precision": 0.698,
+          "recall": 0.6209964412811388,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.9158102766798419,
+          "recall": 0.9388168557536467,
+          "n": 2468
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.7806155861165684,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.7806155861165684,
+          "recall": 1.0,
+          "n": 1192
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.780129970950616,
+        "macro_recall": 0.780129970950616,
+        "accuracy": 0.8343156516044532,
+        "per_class": {
+         "HW": {
+          "precision": 0.6090425531914894,
+          "recall": 0.6835820895522388,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.9079061685490878,
+          "recall": 0.8766778523489933,
+          "n": 1192
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.700244165080637,
+        "macro_recall": 0.700244165080637,
+        "accuracy": 0.8519973804846104,
+        "per_class": {
+         "HW": {
+          "precision": 0.8044692737430168,
+          "recall": 0.4298507462686567,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.8583086053412463,
+          "recall": 0.9706375838926175,
+          "n": 1192
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8489687292082502,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.8489687292082502,
+          "recall": 1.0,
+          "n": 1276
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.7246143648239957,
+        "macro_recall": 0.7246143648239957,
+        "accuracy": 0.7045908183632734,
+        "per_class": {
+         "HW": {
+          "precision": 0.30590339892665475,
+          "recall": 0.7533039647577092,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.940677966101695,
+          "recall": 0.6959247648902821,
+          "n": 1276
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.7632296687058954,
+        "macro_recall": 0.7632296687058954,
+        "accuracy": 0.8070525615435795,
+        "per_class": {
+         "HW": {
+          "precision": 0.41732283464566927,
+          "recall": 0.7004405286343612,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.9393939393939394,
+          "recall": 0.8260188087774295,
+          "n": 1276
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 0.5516844503527327,
+      "macro_recall": 0.5516844503527327,
+      "accuracy": 0.5514851485148515,
+      "per_class": {
+       "NorthBc": {
+        "precision": 0.5452830188679245,
+        "recall": 0.5768463073852296,
+        "n": 1503
+       },
+       "WVanIsl": {
+        "precision": 0.5583333333333333,
+        "recall": 0.5265225933202358,
+        "n": 1527
+       }
+      }
+     },
+     "unsupervised": {
+      "full": {
+       "k": 2,
+       "silhouette": 0.1467122190771119,
+       "ARI_label": 0.04620419566730966,
+       "NMI_label": 0.0493573682374284,
+       "ARI_file": 0.011767938697486912,
+       "ARI_day": 0.013509404482872864,
+       "ARI_deployment": 0.002672953385453018,
+       "hdb_clusters": 2,
+       "hdb_coverage": 0.06831683168316832,
+       "hdb_ARI_label": -0.008591395740460694,
+       "hdb_ARI_file": 0.01428417091574976,
+       "hdb_ARI_deployment": -0.0123468610696611
+      },
+      "day5fold": {
+       "km_ARI_mean": 0.07886635067950784,
+       "km_mapped": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8145214521452145,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8145214521452145,
+          "recall": 1.0,
+          "n": 2468
+         }
+        }
+       },
+       "hdb_coverage": 0.059007428229322145,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.4063204005006258,
+        "macro_recall": 0.4063204005006258,
+        "accuracy": 0.40782122905027934,
+        "per_class": {
+         "HW": {
+          "precision": 0.43617021276595747,
+          "recall": 0.43617021276595747,
+          "n": 94
+         },
+         "KW": {
+          "precision": 0.3764705882352941,
+          "recall": 0.3764705882352941,
+          "n": 85
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "km_ARI_mean": 0.05478929553963428,
+       "km_mapped": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.7806155861165684,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.7806155861165684,
+          "recall": 1.0,
+          "n": 1192
+         }
+        }
+       },
+       "hdb_coverage": 0.03274394237066143,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.5909090909090909,
+        "macro_recall": 0.5909090909090909,
+        "accuracy": 0.64,
+        "per_class": {
+         "HW": {
+          "precision": 0.6086956521739131,
+          "recall": 1.0,
+          "n": 28
+         },
+         "KW": {
+          "precision": 1.0,
+          "recall": 0.18181818181818182,
+          "n": 22
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "km_ARI_mean": 0.026445977855037002,
+       "km_mapped": {
+        "balanced_acc": 0.7701880187259194,
+        "macro_recall": 0.7701880187259194,
+        "accuracy": 0.825016633399867,
+        "per_class": {
+         "HW": {
+          "precision": 0.44857142857142857,
+          "recall": 0.6916299559471366,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.9392888117953165,
+          "recall": 0.8487460815047022,
+          "n": 1276
+         }
+        }
+       },
+       "hdb_coverage": 0.04590818363273453,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.783068783068783,
+        "macro_recall": 0.783068783068783,
+        "accuracy": 0.7681159420289855,
+        "per_class": {
+         "HW": {
+          "precision": 0.8823529411764706,
+          "recall": 0.7142857142857143,
+          "n": 42
+         },
+         "KW": {
+          "precision": 0.6571428571428571,
+          "recall": 0.8518518518518519,
+          "n": 27
+         }
+        }
+       }
+      }
+     }
+    },
+    "baseline+call_AUTOband": {
+     "n_features": 49,
+     "leaks_annotator_info": false,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8145214521452145,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8145214521452145,
+          "recall": 1.0,
+          "n": 2468
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.7509545672147978,
+        "macro_recall": 0.7509545672147978,
+        "accuracy": 0.7924092409240924,
+        "per_class": {
+         "HW": {
+          "precision": 0.45997610513739545,
+          "recall": 0.6850533807829181,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.9192886456908345,
+          "recall": 0.8168557536466775,
+          "n": 2468
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.7217249116088063,
+        "macro_recall": 0.7217249116088063,
+        "accuracy": 0.8656765676567657,
+        "per_class": {
+         "HW": {
+          "precision": 0.6942355889724311,
+          "recall": 0.4928825622775801,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8916761687571265,
+          "recall": 0.9505672609400324,
+          "n": 2468
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.7806155861165684,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.7806155861165684,
+          "recall": 1.0,
+          "n": 1192
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.5012583892617449,
+        "macro_recall": 0.5012583892617449,
+        "accuracy": 0.22134905042567124,
+        "per_class": {
+         "HW": {
+          "precision": 0.21981627296587927,
+          "recall": 1.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 1.0,
+          "recall": 0.0025167785234899327,
+          "n": 1192
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.7876214564760091,
+        "macro_recall": 0.7876214564760091,
+        "accuracy": 0.8644400785854617,
+        "per_class": {
+         "HW": {
+          "precision": 0.7077922077922078,
+          "recall": 0.6507462686567164,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.904019688269073,
+          "recall": 0.924496644295302,
+          "n": 1192
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8489687292082502,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.8489687292082502,
+          "recall": 1.0,
+          "n": 1276
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.5143206330355047,
+        "macro_recall": 0.5143206330355047,
+        "accuracy": 0.21224218230206254,
+        "per_class": {
+         "HW": {
+          "precision": 0.15501081470800288,
+          "recall": 0.947136563876652,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.896551724137931,
+          "recall": 0.08150470219435736,
+          "n": 1276
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.7395288138870093,
+        "macro_recall": 0.7395288138870093,
+        "accuracy": 0.7791084497671324,
+        "per_class": {
+         "HW": {
+          "precision": 0.37349397590361444,
+          "recall": 0.6828193832599119,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.9338235294117647,
+          "recall": 0.7962382445141066,
+          "n": 1276
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 0.9980092205896001,
+      "macro_recall": 0.9980092205896001,
+      "accuracy": 0.998019801980198,
+      "per_class": {
+       "NorthBc": {
+        "precision": 0.9993328885923949,
+        "recall": 0.9966733200266135,
+        "n": 1503
+       },
+       "WVanIsl": {
+        "precision": 0.9967341606792945,
+        "recall": 0.9993451211525868,
+        "n": 1527
+       }
+      }
+     },
+     "unsupervised": {
+      "full": {
+       "k": 2,
+       "silhouette": 0.1093586821033737,
+       "ARI_label": -0.0002755722019406851,
+       "NMI_label": 2.5488971504073177e-06,
+       "ARI_file": 0.05888214529931818,
+       "ARI_day": 0.06605533897885342,
+       "ARI_deployment": 0.8551193950118168,
+       "hdb_clusters": 2,
+       "hdb_coverage": 0.20165016501650165,
+       "hdb_ARI_label": -0.04746000023316514,
+       "hdb_ARI_file": 0.0688605364194689,
+       "hdb_ARI_deployment": 0.9733076579637446
+      },
+      "day5fold": {
+       "km_ARI_mean": 0.07050528208351266,
+       "km_mapped": {
+        "balanced_acc": 0.4961247743356962,
+        "macro_recall": 0.4961247743356962,
+        "accuracy": 0.7914191419141914,
+        "per_class": {
+         "HW": {
+          "precision": 0.15,
+          "recall": 0.026690391459074734,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8133105802047782,
+          "recall": 0.9655591572123177,
+          "n": 2468
+         }
+        }
+       },
+       "hdb_coverage": 0.446584194277845,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.49951028403525954,
+        "macro_recall": 0.49951028403525954,
+        "accuracy": 0.7527675276752768,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 334
+         },
+         "KW": {
+          "precision": 0.7533234859675036,
+          "recall": 0.9990205680705191,
+          "n": 1021
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "km_ARI_mean": 0.23100688184724183,
+       "km_mapped": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.7806155861165684,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.7806155861165684,
+          "recall": 1.0,
+          "n": 1192
+         }
+        }
+       },
+       "hdb_coverage": 0.2776686313032089,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8915094339622641,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 46
+         },
+         "KW": {
+          "precision": 0.8915094339622641,
+          "recall": 1.0,
+          "n": 378
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "km_ARI_mean": -0.012055930343043803,
+       "km_mapped": {
+        "balanced_acc": 0.6972677557897062,
+        "macro_recall": 0.6972677557897062,
+        "accuracy": 0.6274118429807053,
+        "per_class": {
+         "HW": {
+          "precision": 0.260431654676259,
+          "recall": 0.7973568281938326,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.943069306930693,
+          "recall": 0.5971786833855799,
+          "n": 1276
+         }
+        }
+       },
+       "hdb_coverage": 0.14437791084497673,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.8092768654566407,
+        "macro_recall": 0.8092768654566407,
+        "accuracy": 0.9170506912442397,
+        "per_class": {
+         "HW": {
+          "precision": 0.8620689655172413,
+          "recall": 0.6410256410256411,
+          "n": 39
+         },
+         "KW": {
+          "precision": 0.925531914893617,
+          "recall": 0.9775280898876404,
+          "n": 178
+         }
+        }
+       }
+      }
+     }
+    },
+    "call_LABELLEDband__LEAK": {
+     "n_features": 25,
+     "leaks_annotator_info": true,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8145214521452145,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8145214521452145,
+          "recall": 1.0,
+          "n": 2468
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.7136601163937546,
+        "macro_recall": 0.7136601163937546,
+        "accuracy": 0.7204620462046205,
+        "per_class": {
+         "HW": {
+          "precision": 0.3674418604651163,
+          "recall": 0.702846975088968,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.9145780051150895,
+          "recall": 0.7244732576985413,
+          "n": 2468
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.6795141512426677,
+        "macro_recall": 0.6795141512426677,
+        "accuracy": 0.8293729372937294,
+        "per_class": {
+         "HW": {
+          "precision": 0.549889135254989,
+          "recall": 0.4412811387900356,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8782473827064754,
+          "recall": 0.9177471636952999,
+          "n": 2468
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.7806155861165684,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.7806155861165684,
+          "recall": 1.0,
+          "n": 1192
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.7284195632575379,
+        "macro_recall": 0.7284195632575379,
+        "accuracy": 0.7184020956123117,
+        "per_class": {
+         "HW": {
+          "precision": 0.42016806722689076,
+          "recall": 0.746268656716418,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.9087982832618026,
+          "recall": 0.7105704697986577,
+          "n": 1192
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.6883526995893018,
+        "macro_recall": 0.6883526995893018,
+        "accuracy": 0.8434839554682384,
+        "per_class": {
+         "HW": {
+          "precision": 0.7666666666666667,
+          "recall": 0.41194029850746267,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.8537490720118782,
+          "recall": 0.964765100671141,
+          "n": 1192
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8489687292082502,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.8489687292082502,
+          "recall": 1.0,
+          "n": 1276
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.6680999958570975,
+        "macro_recall": 0.6680999958570975,
+        "accuracy": 0.7285429141716567,
+        "per_class": {
+         "HW": {
+          "precision": 0.2966292134831461,
+          "recall": 0.5814977973568282,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.9102079395085066,
+          "recall": 0.7547021943573667,
+          "n": 1276
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.6555142032507975,
+        "macro_recall": 0.6555142032507975,
+        "accuracy": 0.8117099135063207,
+        "per_class": {
+         "HW": {
+          "precision": 0.3888888888888889,
+          "recall": 0.43171806167400884,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.8968824940047961,
+          "recall": 0.8793103448275862,
+          "n": 1276
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 0.5511197644004722,
+      "macro_recall": 0.5511197644004722,
+      "accuracy": 0.5514851485148515,
+      "per_class": {
+       "NorthBc": {
+        "precision": 0.5524017467248908,
+        "recall": 0.5049900199600799,
+        "n": 1503
+       },
+       "WVanIsl": {
+        "precision": 0.5507246376811594,
+        "recall": 0.5972495088408645,
+        "n": 1527
+       }
+      }
+     },
+     "unsupervised": {
+      "full": {
+       "k": 3,
+       "silhouette": 0.19285698484306726,
+       "ARI_label": 0.042348570921106936,
+       "NMI_label": 0.042170221504662354,
+       "ARI_file": 0.014739905894666856,
+       "ARI_day": 0.016336863594157598,
+       "ARI_deployment": 0.0046079794541219994,
+       "hdb_clusters": 2,
+       "hdb_coverage": 0.05577557755775578,
+       "hdb_ARI_label": 0.12719492400767302,
+       "hdb_ARI_file": 0.016256835435843154,
+       "hdb_ARI_deployment": -0.006501636921403652
+      },
+      "day5fold": {
+       "km_ARI_mean": 0.05390434090556449,
+       "km_mapped": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8145214521452145,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 562
+         },
+         "KW": {
+          "precision": 0.8145214521452145,
+          "recall": 1.0,
+          "n": 2468
+         }
+        }
+       },
+       "hdb_coverage": 0.057418751520507835,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.7931034482758621,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 36
+         },
+         "KW": {
+          "precision": 0.7931034482758621,
+          "recall": 1.0,
+          "n": 138
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "km_ARI_mean": 0.13375610600139462,
+       "km_mapped": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.7806155861165684,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 335
+         },
+         "KW": {
+          "precision": 0.7806155861165684,
+          "recall": 1.0,
+          "n": 1192
+         }
+        }
+       },
+       "hdb_coverage": 0.04191224623444663,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.859375,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 9
+         },
+         "KW": {
+          "precision": 0.859375,
+          "recall": 1.0,
+          "n": 55
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "km_ARI_mean": 0.006176110778725236,
+       "km_mapped": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8489687292082502,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 227
+         },
+         "KW": {
+          "precision": 0.8489687292082502,
+          "recall": 1.0,
+          "n": 1276
+         }
+        }
+       },
+       "hdb_coverage": 0.041916167664670656,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.5,
+        "accuracy": 0.8888888888888888,
+        "per_class": {
+         "HW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 7
+         },
+         "KW": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "n": 56
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "ecotype": {
+   "n": 2432,
+   "counts": {
+    "NRKW": 1302,
+    "OKW": 503,
+    "TKW": 627
+   },
+   "featuresets": {
+    "trivial_duration_peakfreq": {
+     "n_features": 2,
+     "leaks_annotator_info": false,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.5353618421052632,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5353618421052632,
+          "recall": 1.0,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 627
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.25595326192422735,
+        "macro_recall": 0.25595326192422735,
+        "accuracy": 0.2808388157894737,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6209677419354839,
+          "recall": 0.3548387096774194,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.17342342342342343,
+          "recall": 0.3061630218687873,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.08375,
+          "recall": 0.10685805422647528,
+          "n": 627
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.3583285636653038,
+        "macro_recall": 0.3583285636653038,
+        "accuracy": 0.4095394736842105,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6088929219600726,
+          "recall": 0.5153609831029186,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.18518518518518517,
+          "recall": 0.20874751491053678,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.28833551769331583,
+          "recall": 0.3508771929824561,
+          "n": 627
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.6777210884353742,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6777210884353742,
+          "recall": 1.0,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 264
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.29648889197468103,
+        "macro_recall": 0.29648889197468103,
+        "accuracy": 0.5773809523809523,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6511175898931001,
+          "recall": 0.8406524466750314,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.05263157894736842,
+          "recall": 0.02608695652173913,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.06666666666666667,
+          "recall": 0.022727272727272728,
+          "n": 264
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.30948860433476655,
+        "macro_recall": 0.30948860433476655,
+        "accuracy": 0.6190476190476191,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6666666666666666,
+          "recall": 0.9084065244667503,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.015625,
+          "recall": 0.008695652173913044,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.11538461538461539,
+          "recall": 0.011363636363636364,
+          "n": 264
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.4020700636942675,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4020700636942675,
+          "recall": 1.0,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 363
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.32475247524752476,
+        "macro_recall": 0.32475247524752476,
+        "accuracy": 0.39171974522292996,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.39773645917542444,
+          "recall": 0.9742574257425742,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 363
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.31903162200006313,
+        "macro_recall": 0.31903162200006313,
+        "accuracy": 0.37420382165605093,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.3983516483516483,
+          "recall": 0.8613861386138614,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.3076923076923077,
+          "recall": 0.010309278350515464,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.2052980132450331,
+          "recall": 0.08539944903581267,
+          "n": 363
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 0.8717638329217037,
+      "macro_recall": 0.8717638329217037,
+      "accuracy": 0.8729440789473685,
+      "per_class": {
+       "NorthBc": {
+        "precision": 0.8552138034508627,
+        "recall": 0.9076433121019108,
+        "n": 1256
+       },
+       "WVanIsl": {
+        "precision": 0.8944494995450409,
+        "recall": 0.8358843537414966,
+        "n": 1176
+       }
+      }
+     }
+    },
+    "baseline003": {
+     "n_features": 22,
+     "leaks_annotator_info": false,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.5353618421052632,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5353618421052632,
+          "recall": 1.0,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 627
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.4146130549307414,
+        "macro_recall": 0.4146130549307414,
+        "accuracy": 0.4642269736842105,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.683111954459203,
+          "recall": 0.5529953917050692,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.20081967213114754,
+          "recall": 0.19483101391650098,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.349438202247191,
+          "recall": 0.4960127591706539,
+          "n": 627
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.3533646459098838,
+        "macro_recall": 0.3533646459098838,
+        "accuracy": 0.42804276315789475,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5991935483870968,
+          "recall": 0.5706605222734255,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.08256880733944955,
+          "recall": 0.07157057654075547,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.34656084656084657,
+          "recall": 0.4178628389154705,
+          "n": 627
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.6777210884353742,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6777210884353742,
+          "recall": 1.0,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 264
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.3375552894059795,
+        "macro_recall": 0.3375552894059795,
+        "accuracy": 0.6777210884353742,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6792452830188679,
+          "recall": 0.9937264742785445,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.5,
+          "recall": 0.01893939393939394,
+          "n": 264
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.3656914736806723,
+        "macro_recall": 0.3656914736806723,
+        "accuracy": 0.6190476190476191,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.7141403865717192,
+          "recall": 0.8808030112923463,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.12631578947368421,
+          "recall": 0.20869565217391303,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.6666666666666666,
+          "recall": 0.007575757575757576,
+          "n": 264
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.4020700636942675,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4020700636942675,
+          "recall": 1.0,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 363
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.44123187389029433,
+        "macro_recall": 0.44123187389029433,
+        "accuracy": 0.39729299363057324,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.9333333333333333,
+          "recall": 0.027722772277227723,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.32848837209302323,
+          "recall": 0.5824742268041238,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.46835443037974683,
+          "recall": 0.7134986225895317,
+          "n": 363
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.385949358759681,
+        "macro_recall": 0.385949358759681,
+        "accuracy": 0.3909235668789809,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4618249534450652,
+          "recall": 0.4910891089108911,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.5555555555555556,
+          "recall": 0.03865979381443299,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.32947976878612717,
+          "recall": 0.628099173553719,
+          "n": 363
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 1.0,
+      "macro_recall": 1.0,
+      "accuracy": 1.0,
+      "per_class": {
+       "NorthBc": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "n": 1256
+       },
+       "WVanIsl": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "n": 1176
+       }
+      }
+     }
+    },
+    "call_AUTOband": {
+     "n_features": 27,
+     "leaks_annotator_info": false,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.5353618421052632,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5353618421052632,
+          "recall": 1.0,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 627
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.4360070817911212,
+        "macro_recall": 0.4360070817911212,
+        "accuracy": 0.4909539473684211,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6764184397163121,
+          "recall": 0.5860215053763441,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.1676190476190476,
+          "recall": 0.1749502982107356,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.44030808729139925,
+          "recall": 0.5470494417862839,
+          "n": 627
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.4765418201828602,
+        "macro_recall": 0.4765418201828602,
+        "accuracy": 0.5814144736842105,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6620644312952005,
+          "recall": 0.7734254992319508,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.0759493670886076,
+          "recall": 0.03578528827037773,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.5771513353115727,
+          "recall": 0.620414673046252,
+          "n": 627
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.6777210884353742,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6777210884353742,
+          "recall": 1.0,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 264
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.4206101713220802,
+        "macro_recall": 0.4206101713220802,
+        "accuracy": 0.5212585034013606,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.75,
+          "recall": 0.5834378920953576,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.07164179104477612,
+          "recall": 0.20869565217391303,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.5610859728506787,
+          "recall": 0.4696969696969697,
+          "n": 264
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.46325719692148154,
+        "macro_recall": 0.46325719692148154,
+        "accuracy": 0.6675170068027211,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.7956730769230769,
+          "recall": 0.8306148055207027,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.09595959595959595,
+          "recall": 0.16521739130434782,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.7123287671232876,
+          "recall": 0.3939393939393939,
+          "n": 264
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.4020700636942675,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4020700636942675,
+          "recall": 1.0,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 363
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.44515931443191176,
+        "macro_recall": 0.44515931443191176,
+        "accuracy": 0.4450636942675159,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.49007936507936506,
+          "recall": 0.4891089108910891,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.30833333333333335,
+          "recall": 0.19072164948453607,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.46484375,
+          "recall": 0.6556473829201102,
+          "n": 363
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.5030985572784082,
+        "macro_recall": 0.5030985572784082,
+        "accuracy": 0.518312101910828,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5400593471810089,
+          "recall": 0.7207920792079208,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.4,
+          "recall": 0.030927835051546393,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.49818840579710144,
+          "recall": 0.7575757575757576,
+          "n": 363
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 0.5832872958100437,
+      "macro_recall": 0.5832872958100437,
+      "accuracy": 0.5842927631578947,
+      "per_class": {
+       "NorthBc": {
+        "precision": 0.5944487278334618,
+        "recall": 0.6138535031847133,
+        "n": 1256
+       },
+       "WVanIsl": {
+        "precision": 0.5726872246696035,
+        "recall": 0.5527210884353742,
+        "n": 1176
+       }
+      }
+     },
+     "unsupervised": {
+      "full": {
+       "k": 2,
+       "silhouette": 0.14894509621249336,
+       "ARI_label": 0.00040714879290895683,
+       "NMI_label": 0.003033210736029047,
+       "ARI_file": 0.015889194852904843,
+       "ARI_day": 0.015746930190236735,
+       "ARI_deployment": 0.0005629822955801196,
+       "hdb_clusters": 2,
+       "hdb_coverage": 0.33963815789473684,
+       "hdb_ARI_label": 0.01812179588759947,
+       "hdb_ARI_file": 0.0035870390171216155,
+       "hdb_ARI_deployment": 0.0024408907491478868
+      },
+      "day5fold": {
+       "km_ARI_mean": 0.01258687408939545,
+       "km_mapped": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.5353618421052632,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5353618421052632,
+          "recall": 1.0,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 627
+         }
+        }
+       },
+       "hdb_coverage": 0.4122666850276563,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.34754098360655733,
+        "macro_recall": 0.34754098360655733,
+        "accuracy": 0.6087824351297405,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6067073170731707,
+          "recall": 1.0,
+          "n": 597
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 100
+         },
+         "TKW": {
+          "precision": 0.7222222222222222,
+          "recall": 0.04262295081967213,
+          "n": 305
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "km_ARI_mean": 0.010128918240498126,
+       "km_mapped": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.6777210884353742,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6777210884353742,
+          "recall": 1.0,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 264
+         }
+        }
+       },
+       "hdb_coverage": 0.02976190476190476,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.2571428571428571,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 22
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 4
+         },
+         "TKW": {
+          "precision": 0.2571428571428571,
+          "recall": 1.0,
+          "n": 9
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "km_ARI_mean": 0.001712907601651264,
+       "km_mapped": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.4020700636942675,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4020700636942675,
+          "recall": 1.0,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 363
+         }
+        }
+       },
+       "hdb_coverage": 0.7627388535031847,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.33995584988962474,
+        "macro_recall": 0.33995584988962474,
+        "accuracy": 0.38413361169102295,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.38105263157894737,
+          "recall": 1.0,
+          "n": 362
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 294
+         },
+         "TKW": {
+          "precision": 0.75,
+          "recall": 0.019867549668874173,
+          "n": 302
+         }
+        }
+       }
+      }
+     }
+    },
+    "baseline+call_AUTOband": {
+     "n_features": 49,
+     "leaks_annotator_info": false,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.5353618421052632,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5353618421052632,
+          "recall": 1.0,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 627
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.44490510931086497,
+        "macro_recall": 0.44490510931086497,
+        "accuracy": 0.4942434210526316,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6815286624203821,
+          "recall": 0.5752688172043011,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.21029082774049218,
+          "recall": 0.18687872763419483,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.4051918735891648,
+          "recall": 0.5725677830940988,
+          "n": 627
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.4223506251778047,
+        "macro_recall": 0.4223506251778047,
+        "accuracy": 0.5069901315789473,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6540499621498864,
+          "recall": 0.663594470046083,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.09290953545232274,
+          "recall": 0.07554671968190854,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.47150997150997154,
+          "recall": 0.5279106858054227,
+          "n": 627
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.6777210884353742,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6777210884353742,
+          "recall": 1.0,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 264
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.335813649009874,
+        "macro_recall": 0.335813649009874,
+        "accuracy": 0.6777210884353742,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6791808873720137,
+          "recall": 0.998745294855709,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.3333333333333333,
+          "recall": 0.008695652173913044,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 264
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.37407201687928326,
+        "macro_recall": 0.37407201687928326,
+        "accuracy": 0.6326530612244898,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.7366255144032922,
+          "recall": 0.8983688833124216,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.1218274111675127,
+          "recall": 0.20869565217391303,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.5714285714285714,
+          "recall": 0.015151515151515152,
+          "n": 264
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.4020700636942675,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4020700636942675,
+          "recall": 1.0,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 363
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.4654785815976162,
+        "macro_recall": 0.4654785815976162,
+        "accuracy": 0.42356687898089174,
+        "per_class": {
+         "NRKW": {
+          "precision": 1.0,
+          "recall": 0.007920792079207921,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.35294117647058826,
+          "recall": 0.9587628865979382,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.7878787878787878,
+          "recall": 0.4297520661157025,
+          "n": 363
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.42778711329427227,
+        "macro_recall": 0.42778711329427227,
+        "accuracy": 0.45143312101910826,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.46262886597938147,
+          "recall": 0.7108910891089109,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.75,
+          "recall": 0.007731958762886598,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.43067226890756305,
+          "recall": 0.5647382920110193,
+          "n": 363
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 1.0,
+      "macro_recall": 1.0,
+      "accuracy": 1.0,
+      "per_class": {
+       "NorthBc": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "n": 1256
+       },
+       "WVanIsl": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "n": 1176
+       }
+      }
+     },
+     "unsupervised": {
+      "full": {
+       "k": 2,
+       "silhouette": 0.11517717398474736,
+       "ARI_label": 0.06082882494416342,
+       "NMI_label": 0.06485657617651983,
+       "ARI_file": 0.08137819782314172,
+       "ARI_day": 0.08646834375529495,
+       "ARI_deployment": 0.9384511498777035,
+       "hdb_clusters": 3,
+       "hdb_coverage": 0.45929276315789475,
+       "hdb_ARI_label": 0.015255412746113316,
+       "hdb_ARI_file": 0.004107059406575496,
+       "hdb_ARI_deployment": 0.002127615673632585
+      },
+      "day5fold": {
+       "km_ARI_mean": 0.4039423922799406,
+       "km_mapped": {
+        "balanced_acc": 0.22707177315014168,
+        "macro_recall": 0.22707177315014168,
+        "accuracy": 0.3614309210526316,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.46613333333333334,
+          "recall": 0.6712749615975423,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.008976660682226212,
+          "recall": 0.009940357852882704,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 627
+         }
+        }
+       },
+       "hdb_coverage": 0.4897426436069329,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.34968789652624305,
+        "macro_recall": 0.34968789652624305,
+        "accuracy": 0.5907563025210084,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.620531622364803,
+          "recall": 0.9415855354659249,
+          "n": 719
+         },
+         "OKW": {
+          "precision": 0.0410958904109589,
+          "recall": 0.013215859030837005,
+          "n": 227
+         },
+         "TKW": {
+          "precision": 0.8846153846153846,
+          "recall": 0.0942622950819672,
+          "n": 244
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "km_ARI_mean": 0.0403957217677937,
+       "km_mapped": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.6777210884353742,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6777210884353742,
+          "recall": 1.0,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 264
+         }
+        }
+       },
+       "hdb_coverage": 0.003401360544217687,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.0,
+        "macro_recall": 0.0,
+        "accuracy": 0.0,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 4
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 0
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 0
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "km_ARI_mean": -0.002150845230607107,
+       "km_mapped": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.4020700636942675,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4020700636942675,
+          "recall": 1.0,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 363
+         }
+        }
+       },
+       "hdb_coverage": 0.004777070063694267,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.5,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.3333333333333333,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "n": 2
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 0
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 4
+         }
+        }
+       }
+      }
+     }
+    },
+    "call_LABELLEDband__LEAK": {
+     "n_features": 25,
+     "leaks_annotator_info": true,
+     "supervised": {
+      "day5fold": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.5353618421052632,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5353618421052632,
+          "recall": 1.0,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 627
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.40787907904394044,
+        "macro_recall": 0.40787907904394044,
+        "accuracy": 0.42475328947368424,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6145610278372591,
+          "recall": 0.44086021505376344,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.20093457943925233,
+          "recall": 0.25646123260437376,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.3855140186915888,
+          "recall": 0.5263157894736842,
+          "n": 627
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.42169157300103377,
+        "macro_recall": 0.42169157300103377,
+        "accuracy": 0.5263157894736842,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6070975918884665,
+          "recall": 0.7357910906298003,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.17094017094017094,
+          "recall": 0.07952286282306163,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.45483870967741935,
+          "recall": 0.44976076555023925,
+          "n": 627
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.6777210884353742,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.6777210884353742,
+          "recall": 1.0,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 264
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.4326863777152905,
+        "macro_recall": 0.4326863777152905,
+        "accuracy": 0.4549319727891156,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.762993762993763,
+          "recall": 0.4604767879548306,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.13486842105263158,
+          "recall": 0.3565217391304348,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.3248081841432225,
+          "recall": 0.4810606060606061,
+          "n": 264
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.4714184835645749,
+        "macro_recall": 0.4714184835645749,
+        "accuracy": 0.5578231292517006,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.7636363636363637,
+          "recall": 0.6323713927227101,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.17721518987341772,
+          "recall": 0.3652173913043478,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.3942652329749104,
+          "recall": 0.4166666666666667,
+          "n": 264
+         }
+        }
+       }
+      },
+      "WVanIsl->NorthBc": {
+       "majority": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.4020700636942675,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4020700636942675,
+          "recall": 1.0,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 363
+         }
+        }
+       },
+       "LR": {
+        "balanced_acc": 0.4486241173320706,
+        "macro_recall": 0.4486241173320706,
+        "accuracy": 0.45302547770700635,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5049115913555993,
+          "recall": 0.5089108910891089,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.37910447761194027,
+          "recall": 0.327319587628866,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.44902912621359226,
+          "recall": 0.509641873278237,
+          "n": 363
+         }
+        }
+       },
+       "RF": {
+        "balanced_acc": 0.4054420765412998,
+        "macro_recall": 0.4054420765412998,
+        "accuracy": 0.4538216560509554,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.46083418107833163,
+          "recall": 0.897029702970297,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.5,
+          "recall": 0.04381443298969072,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.41841004184100417,
+          "recall": 0.27548209366391185,
+          "n": 363
+         }
+        }
+       }
+      }
+     },
+     "deployment_check_RF_day5fold": {
+      "balanced_acc": 0.5240451276051822,
+      "macro_recall": 0.5240451276051822,
+      "accuracy": 0.5234375,
+      "per_class": {
+       "NorthBc": {
+        "precision": 0.5413469735720375,
+        "recall": 0.5055732484076433,
+        "n": 1256
+       },
+       "WVanIsl": {
+        "precision": 0.5067513899920572,
+        "recall": 0.5425170068027211,
+        "n": 1176
+       }
+      }
+     },
+     "unsupervised": {
+      "full": {
+       "k": 2,
+       "silhouette": 0.18896104420275958,
+       "ARI_label": 0.05453993371470322,
+       "NMI_label": 0.042481008990436955,
+       "ARI_file": 0.010224856998673669,
+       "ARI_day": 0.010707991323170518,
+       "ARI_deployment": 0.014408061745124125,
+       "hdb_clusters": 2,
+       "hdb_coverage": 0.06332236842105263,
+       "hdb_ARI_label": 0.1860497125232265,
+       "hdb_ARI_file": 0.023882085360938415,
+       "hdb_ARI_deployment": -0.011455393399855004
+      },
+      "day5fold": {
+       "km_ARI_mean": 0.051422725138211334,
+       "km_mapped": {
+        "balanced_acc": 0.29575513889325417,
+        "macro_recall": 0.29575513889325417,
+        "accuracy": 0.44037828947368424,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4916256157635468,
+          "recall": 0.7665130568356375,
+          "n": 1302
+         },
+         "OKW": {
+          "precision": 0.0990990990990991,
+          "recall": 0.02186878727634195,
+          "n": 503
+         },
+         "TKW": {
+          "precision": 0.21305841924398625,
+          "recall": 0.09888357256778309,
+          "n": 627
+         }
+        }
+       },
+       "hdb_coverage": 0.07152271372643934,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.40806270996640537,
+        "macro_recall": 0.40806270996640537,
+        "accuracy": 0.5862068965517241,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.5751633986928104,
+          "recall": 0.9263157894736842,
+          "n": 95
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 32
+         },
+         "TKW": {
+          "precision": 0.6666666666666666,
+          "recall": 0.2978723404255319,
+          "n": 47
+         }
+        }
+       }
+      },
+      "NorthBc->WVanIsl": {
+       "km_ARI_mean": 0.07313128129261405,
+       "km_mapped": {
+        "balanced_acc": 0.43788673654883903,
+        "macro_recall": 0.43788673654883903,
+        "accuracy": 0.5739795918367347,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.7547723935389133,
+          "recall": 0.644918444165621,
+          "n": 797
+         },
+         "OKW": {
+          "precision": 0.11320754716981132,
+          "recall": 0.10434782608695652,
+          "n": 115
+         },
+         "TKW": {
+          "precision": 0.38303341902313626,
+          "recall": 0.5643939393939394,
+          "n": 264
+         }
+        }
+       },
+       "hdb_coverage": 0.0,
+       "hdb_mapped_covered": null
+      },
+      "WVanIsl->NorthBc": {
+       "km_ARI_mean": 0.023688432658298397,
+       "km_mapped": {
+        "balanced_acc": 0.3333333333333333,
+        "macro_recall": 0.3333333333333333,
+        "accuracy": 0.4020700636942675,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.4020700636942675,
+          "recall": 1.0,
+          "n": 505
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 388
+         },
+         "TKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 363
+         }
+        }
+       },
+       "hdb_coverage": 0.04856687898089172,
+       "hdb_mapped_covered": {
+        "balanced_acc": 0.38674388674388677,
+        "macro_recall": 0.38674388674388677,
+        "accuracy": 0.6229508196721312,
+        "per_class": {
+         "NRKW": {
+          "precision": 0.625,
+          "recall": 0.9459459459459459,
+          "n": 37
+         },
+         "OKW": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "n": 10
+         },
+         "TKW": {
+          "precision": 0.6,
+          "recall": 0.21428571428571427,
+          "n": 14
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "runtime_s": 261.8886423110962,
+ "seed": 0,
+ "sr": 16000
+}

@@ -1,0 +1,29 @@
+auto band median [289.0625, 3179.6875] bg fallback 0.0
+## species {'KW': 2468, 'HW': 562}
+trivial_duration_peakfreq LR day5fold per-class {'HW': (0.24, 0.61), 'KW': (0.86, 0.55)}
+trivial_duration_peakfreq RF day5fold per-class {'HW': (0.31, 0.49), 'KW': (0.87, 0.75)}
+baseline003 LR day5fold per-class {'HW': (0.3, 0.57), 'KW': (0.88, 0.71)}
+baseline003 RF day5fold per-class {'HW': (0.54, 0.29), 'KW': (0.85, 0.94)}
+call_AUTOband LR day5fold per-class {'HW': (0.49, 0.78), 'KW': (0.94, 0.82)}
+call_AUTOband RF day5fold per-class {'HW': (0.7, 0.62), 'KW': (0.92, 0.94)}
+  UNSUP call_AUTOband k 2 sil 0.15 ARI lab 0.046 file 0.012 day 0.014 dep 0.003 | hdb 2 cl cov 0.07 ARIlab -0.008591395740460694 ARIdep -0.0123468610696611 {'day5fold': (0.079, 0.5, 0.06, 0.406), 'NorthBc->WVanIsl': (0.055, 0.5, 0.03, 0.591), 'WVanIsl->NorthBc': (0.026, 0.77, 0.05, 0.783)}
+baseline+call_AUTOband LR day5fold per-class {'HW': (0.46, 0.69), 'KW': (0.92, 0.82)}
+baseline+call_AUTOband RF day5fold per-class {'HW': (0.69, 0.49), 'KW': (0.89, 0.95)}
+  UNSUP baseline+call_AUTOband k 2 sil 0.11 ARI lab -0.000 file 0.059 day 0.066 dep 0.855 | hdb 2 cl cov 0.20 ARIlab -0.04746000023316514 ARIdep 0.9733076579637446 {'day5fold': (0.071, 0.496, 0.45, 0.5), 'NorthBc->WVanIsl': (0.231, 0.5, 0.28, 0.5), 'WVanIsl->NorthBc': (-0.012, 0.697, 0.14, 0.809)}
+call_LABELLEDband__LEAK LR day5fold per-class {'HW': (0.37, 0.7), 'KW': (0.91, 0.72)}
+call_LABELLEDband__LEAK RF day5fold per-class {'HW': (0.55, 0.44), 'KW': (0.88, 0.92)}
+  UNSUP call_LABELLEDband__LEAK k 3 sil 0.19 ARI lab 0.042 file 0.015 day 0.016 dep 0.005 | hdb 2 cl cov 0.06 ARIlab 0.12719492400767302 ARIdep -0.006501636921403652 {'day5fold': (0.054, 0.5, 0.06, 0.5), 'NorthBc->WVanIsl': (0.134, 0.5, 0.04, 0.5), 'WVanIsl->NorthBc': (0.006, 0.5, 0.04, 0.5)}
+## ecotype {'NRKW': 1302, 'OKW': 503, 'TKW': 627}
+trivial_duration_peakfreq LR day5fold per-class {'NRKW': (0.62, 0.35), 'OKW': (0.17, 0.31), 'TKW': (0.08, 0.11)}
+trivial_duration_peakfreq RF day5fold per-class {'NRKW': (0.61, 0.52), 'OKW': (0.19, 0.21), 'TKW': (0.29, 0.35)}
+baseline003 LR day5fold per-class {'NRKW': (0.68, 0.55), 'OKW': (0.2, 0.19), 'TKW': (0.35, 0.5)}
+baseline003 RF day5fold per-class {'NRKW': (0.6, 0.57), 'OKW': (0.08, 0.07), 'TKW': (0.35, 0.42)}
+call_AUTOband LR day5fold per-class {'NRKW': (0.68, 0.59), 'OKW': (0.17, 0.17), 'TKW': (0.44, 0.55)}
+call_AUTOband RF day5fold per-class {'NRKW': (0.66, 0.77), 'OKW': (0.08, 0.04), 'TKW': (0.58, 0.62)}
+  UNSUP call_AUTOband k 2 sil 0.15 ARI lab 0.000 file 0.016 day 0.016 dep 0.001 | hdb 2 cl cov 0.34 ARIlab 0.01812179588759947 ARIdep 0.0024408907491478868 {'day5fold': (0.013, 0.333, 0.41, 0.348), 'NorthBc->WVanIsl': (0.01, 0.333, 0.03, 0.333), 'WVanIsl->NorthBc': (0.002, 0.333, 0.76, 0.34)}
+baseline+call_AUTOband LR day5fold per-class {'NRKW': (0.68, 0.58), 'OKW': (0.21, 0.19), 'TKW': (0.41, 0.57)}
+baseline+call_AUTOband RF day5fold per-class {'NRKW': (0.65, 0.66), 'OKW': (0.09, 0.08), 'TKW': (0.47, 0.53)}
+  UNSUP baseline+call_AUTOband k 2 sil 0.12 ARI lab 0.061 file 0.081 day 0.086 dep 0.938 | hdb 3 cl cov 0.46 ARIlab 0.015255412746113316 ARIdep 0.002127615673632585 {'day5fold': (0.404, 0.227, 0.49, 0.35), 'NorthBc->WVanIsl': (0.04, 0.333, 0.0, 0.0), 'WVanIsl->NorthBc': (-0.002, 0.333, 0.0, 0.5)}
+call_LABELLEDband__LEAK LR day5fold per-class {'NRKW': (0.61, 0.44), 'OKW': (0.2, 0.26), 'TKW': (0.39, 0.53)}
+call_LABELLEDband__LEAK RF day5fold per-class {'NRKW': (0.61, 0.74), 'OKW': (0.17, 0.08), 'TKW': (0.45, 0.45)}
+  UNSUP call_LABELLEDband__LEAK k 2 sil 0.19 ARI lab 0.055 file 0.010 day 0.011 dep 0.014 | hdb 2 cl cov 0.06 ARIlab 0.1860497125232265 ARIdep -0.011455393399855004 {'day5fold': (0.051, 0.296, 0.07, 0.408), 'NorthBc->WVanIsl': (0.073, 0.438, 0.0, None), 'WVanIsl->NorthBc': (0.024, 0.333, 0.05, 0.387)}

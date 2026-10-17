@@ -1,0 +1,77 @@
+{
+ "files": 55,
+ "bytes": 185568550,
+ "audio_hours": 4.36,
+ "samplerates": {
+  "KkHK0R2F-NML1|SM2M-3|16000Hz|1ch|PCM_16": 28,
+  "H50bjRcb-WCV1|AURAL117LF|16384Hz|1ch|PCM_16": 27
+ },
+ "durations_s": {
+  "KkHK0R2F-NML1|300": 28,
+  "H50bjRcb-WCV1|270": 27
+ },
+ "events": 3061,
+ "events_out_of_file_bounds": 1,
+ "events_above_nyquist": 0,
+ "per_deployment": {
+  "NorthBc": {
+   "session_days": 24,
+   "labels": {
+    "KW_NRKW": {
+     "events": 505,
+     "days": 8
+    },
+    "KW_OKW": {
+     "events": 388,
+     "days": 7
+    },
+    "KW_TKW": {
+     "events": 363,
+     "days": 9
+    },
+    "HW": {
+     "events": 227,
+     "days": 12
+    },
+    "UndBio": {
+     "events": 21,
+     "days": 1
+    },
+    "KW_unk": {
+     "events": 20,
+     "days": 6
+    },
+    "AB": {
+     "events": 10,
+     "days": 5
+    }
+   }
+  },
+  "WVanIsl": {
+   "session_days": 23,
+   "labels": {
+    "KW_NRKW": {
+     "events": 797,
+     "days": 8
+    },
+    "HW": {
+     "events": 335,
+     "days": 12
+    },
+    "KW_TKW": {
+     "events": 264,
+     "days": 10
+    },
+    "KW_OKW": {
+     "events": 115,
+     "days": 6
+    },
+    "KW_unk": {
+     "events": 16,
+     "days": 5
+    }
+   }
+  }
+ },
+ "multi_label_files": 37
+}

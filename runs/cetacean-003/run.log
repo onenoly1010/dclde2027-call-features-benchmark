@@ -1,0 +1,11 @@
+features 3061 31 s
+species 0_trivial_duration_peakfreq fullARI 0.009 file 0.031 dep 0.194 dayCV ARI 0.014 macroR 0.5
+species 1_baseline fullARI 0.002 file 0.061 dep 0.925 dayCV ARI 0.119 macroR 0.5
+species 2_plus_deltas fullARI -0.02 file 0.012 dep 0.084 dayCV ARI 0.013 macroR 0.5
+species 3_baseline_filenorm fullARI 0.014 file -0.0 dep -0.0 dayCV ARI 0.016 macroR 0.5
+species 4_deltas_filenorm fullARI 0.005 file -0.001 dep 0.0 dayCV ARI 0.005 macroR 0.5
+ecotype 0_trivial_duration_peakfreq fullARI 0.005 file 0.07 dep 0.15 dayCV ARI 0.089 macroR 0.313
+ecotype 1_baseline fullARI 0.057 file 0.083 dep 0.979 dayCV ARI 0.415 macroR 0.248
+ecotype 2_plus_deltas fullARI 0.003 file 0.017 dep 0.064 dayCV ARI 0.099 macroR 0.333
+ecotype 3_baseline_filenorm fullARI 0.001 file -0.001 dep -0.0 dayCV ARI -0.002 macroR 0.333
+ecotype 4_deltas_filenorm fullARI -0.001 file -0.001 dep 0.0 dayCV ARI -0.002 macroR 0.333

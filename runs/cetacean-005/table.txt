@@ -1,0 +1,80 @@
+## species 11540 {'KW': 6548, 'HW': 4992} days {'NorthBc': 75, 'WVanIsl': 128}
+trivial|LR day5fold: 0.543±0.013 [0.498, 0.633] | NorthBc->WVanIsl: 0.511±0.000 [0.483, 0.544] | WVanIsl->NorthBc: 0.500±0.000 [0.498, 0.501]
+trivial|RF day5fold: 0.669±0.004 [0.638, 0.700] | NorthBc->WVanIsl: 0.540±0.001 [0.507, 0.567] | WVanIsl->NorthBc: 0.635±0.002 [0.589, 0.680]
+baseline003|LR day5fold: 0.739±0.004 [0.696, 0.783] | NorthBc->WVanIsl: 0.500±0.000 [0.500, 0.501] | WVanIsl->NorthBc: 0.543±0.000 [0.490, 0.608]
+baseline003|RF day5fold: 0.795±0.002 [0.753, 0.827] | NorthBc->WVanIsl: 0.626±0.004 [0.575, 0.674] | WVanIsl->NorthBc: 0.641±0.004 [0.564, 0.725]
+call_AUTO|LR day5fold: 0.834±0.001 [0.809, 0.860] | NorthBc->WVanIsl: 0.844±0.000 [0.815, 0.868] | WVanIsl->NorthBc: 0.775±0.000 [0.722, 0.820]
+call_AUTO|RF day5fold: 0.845±0.002 [0.821, 0.869] | NorthBc->WVanIsl: 0.848±0.001 [0.823, 0.871] | WVanIsl->NorthBc: 0.787±0.001 [0.735, 0.830]
+PAIRED call_AUTO|LR minus trivial|LR|day5fold +0.272 [0.199, 0.341] P(<=0)=0.000
+PAIRED call_AUTO|LR minus trivial|RF|day5fold +0.166 [0.135, 0.198] P(<=0)=0.000
+PAIRED call_AUTO|LR minus baseline003|LR|day5fold +0.095 [0.058, 0.135] P(<=0)=0.000
+PAIRED call_AUTO|LR minus baseline003|RF|day5fold +0.043 [0.014, 0.077] P(<=0)=0.000
+PAIRED call_AUTO|RF minus trivial|LR|day5fold +0.283 [0.215, 0.348] P(<=0)=0.000
+PAIRED call_AUTO|RF minus trivial|RF|day5fold +0.177 [0.149, 0.206] P(<=0)=0.000
+PAIRED call_AUTO|RF minus baseline003|LR|day5fold +0.106 [0.070, 0.144] P(<=0)=0.000
+PAIRED call_AUTO|RF minus baseline003|RF|day5fold +0.054 [0.024, 0.088] P(<=0)=0.000
+PAIRED call_AUTO|LR minus trivial|LR|NorthBc->WVanIsl +0.332 [0.291, 0.371] P(<=0)=0.000
+PAIRED call_AUTO|LR minus trivial|RF|NorthBc->WVanIsl +0.306 [0.269, 0.341] P(<=0)=0.000
+PAIRED call_AUTO|LR minus baseline003|LR|NorthBc->WVanIsl +0.343 [0.315, 0.368] P(<=0)=0.000
+PAIRED call_AUTO|LR minus baseline003|RF|NorthBc->WVanIsl +0.219 [0.171, 0.271] P(<=0)=0.000
+PAIRED call_AUTO|RF minus trivial|LR|NorthBc->WVanIsl +0.338 [0.299, 0.374] P(<=0)=0.000
+PAIRED call_AUTO|RF minus trivial|RF|NorthBc->WVanIsl +0.311 [0.279, 0.343] P(<=0)=0.000
+PAIRED call_AUTO|RF minus baseline003|LR|NorthBc->WVanIsl +0.349 [0.322, 0.370] P(<=0)=0.000
+PAIRED call_AUTO|RF minus baseline003|RF|NorthBc->WVanIsl +0.225 [0.177, 0.275] P(<=0)=0.000
+PAIRED call_AUTO|LR minus trivial|LR|WVanIsl->NorthBc +0.275 [0.223, 0.318] P(<=0)=0.000
+PAIRED call_AUTO|LR minus trivial|RF|WVanIsl->NorthBc +0.138 [0.090, 0.186] P(<=0)=0.000
+PAIRED call_AUTO|LR minus baseline003|LR|WVanIsl->NorthBc +0.232 [0.150, 0.300] P(<=0)=0.000
+PAIRED call_AUTO|LR minus baseline003|RF|WVanIsl->NorthBc +0.129 [0.051, 0.195] P(<=0)=0.001
+PAIRED call_AUTO|RF minus trivial|LR|WVanIsl->NorthBc +0.286 [0.237, 0.328] P(<=0)=0.000
+PAIRED call_AUTO|RF minus trivial|RF|WVanIsl->NorthBc +0.149 [0.105, 0.197] P(<=0)=0.000
+PAIRED call_AUTO|RF minus baseline003|LR|WVanIsl->NorthBc +0.243 [0.168, 0.309] P(<=0)=0.000
+PAIRED call_AUTO|RF minus baseline003|RF|WVanIsl->NorthBc +0.140 [0.069, 0.203] P(<=0)=0.000
+PERM call_AUTO|LR|day5fold obs 0.835 null mean 0.566 p95 0.629 max 0.653 p=0.005
+PERM call_AUTO|LR|NorthBc->WVanIsl obs 0.844 null mean 0.496 p95 0.635 max 0.666 p=0.005
+PERM call_AUTO|LR|WVanIsl->NorthBc obs 0.775 null mean 0.501 p95 0.564 max 0.611 p=0.005
+PERM call_AUTO|RF|day5fold obs 0.846 null mean 0.558 p95 0.619 max 0.647 p=0.005
+PERM call_AUTO|RF|NorthBc->WVanIsl obs 0.849 null mean 0.502 p95 0.557 max 0.589 p=0.005
+PERM call_AUTO|RF|WVanIsl->NorthBc obs 0.786 null mean 0.502 p95 0.555 max 0.575 p=0.005
+## ecotype 6441 {'TKW': 2539, 'NRKW': 2769, 'OKW': 1133} days {'NorthBc': 45, 'WVanIsl': 93}
+trivial|LR day5fold: 0.400±0.025 [0.286, 0.453] | NorthBc->WVanIsl: 0.452±0.000 [0.409, 0.486] | WVanIsl->NorthBc: 0.332±0.000 [0.330, 0.333]
+   recall seed0: {'day5fold': {'NRKW': 0.19, 'OKW': 0.53, 'TKW': 0.41}, 'NorthBc->WVanIsl': {'NRKW': 0.46, 'OKW': 0.85, 'TKW': 0.05}, 'WVanIsl->NorthBc': {'NRKW': 1.0, 'OKW': 0.0, 'TKW': 0.0}}
+trivial|RF day5fold: 0.397±0.027 [0.337, 0.456] | NorthBc->WVanIsl: 0.321±0.002 [0.299, 0.341] | WVanIsl->NorthBc: 0.320±0.001 [0.286, 0.359]
+   recall seed0: {'day5fold': {'NRKW': 0.39, 'OKW': 0.29, 'TKW': 0.49}, 'NorthBc->WVanIsl': {'NRKW': 0.65, 'OKW': 0.03, 'TKW': 0.28}, 'WVanIsl->NorthBc': {'NRKW': 0.77, 'OKW': 0.02, 'TKW': 0.16}}
+baseline003|LR day5fold: 0.512±0.034 [0.406, 0.559] | NorthBc->WVanIsl: 0.408±0.000 [0.345, 0.462] | WVanIsl->NorthBc: 0.443±0.000 [0.380, 0.489]
+   recall seed0: {'day5fold': {'NRKW': 0.47, 'OKW': 0.47, 'TKW': 0.56}, 'NorthBc->WVanIsl': {'NRKW': 0.56, 'OKW': 0.0, 'TKW': 0.67}, 'WVanIsl->NorthBc': {'NRKW': 0.38, 'OKW': 0.77, 'TKW': 0.18}}
+baseline003|RF day5fold: 0.421±0.034 [0.344, 0.520] | NorthBc->WVanIsl: 0.432±0.009 [0.396, 0.488] | WVanIsl->NorthBc: 0.392±0.008 [0.344, 0.465]
+   recall seed0: {'day5fold': {'NRKW': 0.48, 'OKW': 0.17, 'TKW': 0.62}, 'NorthBc->WVanIsl': {'NRKW': 0.5, 'OKW': 0.0, 'TKW': 0.82}, 'WVanIsl->NorthBc': {'NRKW': 0.76, 'OKW': 0.01, 'TKW': 0.45}}
+call_AUTO|LR day5fold: 0.484±0.007 [0.438, 0.537] | NorthBc->WVanIsl: 0.457±0.000 [0.397, 0.515] | WVanIsl->NorthBc: 0.462±0.000 [0.399, 0.555]
+   recall seed0: {'day5fold': {'NRKW': 0.49, 'OKW': 0.43, 'TKW': 0.56}, 'NorthBc->WVanIsl': {'NRKW': 0.62, 'OKW': 0.22, 'TKW': 0.53}, 'WVanIsl->NorthBc': {'NRKW': 0.41, 'OKW': 0.4, 'TKW': 0.58}}
+call_AUTO|RF day5fold: 0.488±0.011 [0.448, 0.534] | NorthBc->WVanIsl: 0.492±0.006 [0.432, 0.530] | WVanIsl->NorthBc: 0.459±0.003 [0.410, 0.519]
+   recall seed0: {'day5fold': {'NRKW': 0.7, 'OKW': 0.09, 'TKW': 0.67}, 'NorthBc->WVanIsl': {'NRKW': 0.78, 'OKW': 0.27, 'TKW': 0.41}, 'WVanIsl->NorthBc': {'NRKW': 0.65, 'OKW': 0.02, 'TKW': 0.69}}
+PAIRED call_AUTO|LR minus trivial|LR|day5fold +0.117 [0.031, 0.199] P(<=0)=0.004
+PAIRED call_AUTO|LR minus trivial|RF|day5fold +0.102 [0.005, 0.180] P(<=0)=0.019
+PAIRED call_AUTO|LR minus baseline003|LR|day5fold -0.005 [-0.071, 0.073] P(<=0)=0.568
+PAIRED call_AUTO|LR minus baseline003|RF|day5fold +0.070 [-0.039, 0.159] P(<=0)=0.102
+PAIRED call_AUTO|RF minus trivial|LR|day5fold +0.108 [0.031, 0.214] P(<=0)=0.004
+PAIRED call_AUTO|RF minus trivial|RF|day5fold +0.093 [0.046, 0.148] P(<=0)=0.000
+PAIRED call_AUTO|RF minus baseline003|LR|day5fold -0.014 [-0.071, 0.088] P(<=0)=0.614
+PAIRED call_AUTO|RF minus baseline003|RF|day5fold +0.061 [0.001, 0.127] P(<=0)=0.025
+PAIRED call_AUTO|LR minus trivial|LR|NorthBc->WVanIsl +0.004 [-0.040, 0.057] P(<=0)=0.407
+PAIRED call_AUTO|LR minus trivial|RF|NorthBc->WVanIsl +0.136 [0.078, 0.194] P(<=0)=0.000
+PAIRED call_AUTO|LR minus baseline003|LR|NorthBc->WVanIsl +0.049 [-0.032, 0.130] P(<=0)=0.124
+PAIRED call_AUTO|LR minus baseline003|RF|NorthBc->WVanIsl +0.013 [-0.062, 0.089] P(<=0)=0.379
+PAIRED call_AUTO|RF minus trivial|LR|NorthBc->WVanIsl +0.035 [-0.008, 0.081] P(<=0)=0.055
+PAIRED call_AUTO|RF minus trivial|RF|NorthBc->WVanIsl +0.167 [0.113, 0.212] P(<=0)=0.000
+PAIRED call_AUTO|RF minus baseline003|LR|NorthBc->WVanIsl +0.079 [-0.001, 0.149] P(<=0)=0.026
+PAIRED call_AUTO|RF minus baseline003|RF|NorthBc->WVanIsl +0.044 [-0.030, 0.108] P(<=0)=0.117
+PAIRED call_AUTO|LR minus trivial|LR|WVanIsl->NorthBc +0.130 [0.070, 0.231] P(<=0)=0.001
+PAIRED call_AUTO|LR minus trivial|RF|WVanIsl->NorthBc +0.142 [0.078, 0.236] P(<=0)=0.000
+PAIRED call_AUTO|LR minus baseline003|LR|WVanIsl->NorthBc +0.018 [-0.034, 0.108] P(<=0)=0.235
+PAIRED call_AUTO|LR minus baseline003|RF|WVanIsl->NorthBc +0.054 [-0.026, 0.173] P(<=0)=0.098
+PAIRED call_AUTO|RF minus trivial|LR|WVanIsl->NorthBc +0.123 [0.080, 0.187] P(<=0)=0.000
+PAIRED call_AUTO|RF minus trivial|RF|WVanIsl->NorthBc +0.136 [0.098, 0.184] P(<=0)=0.000
+PAIRED call_AUTO|RF minus baseline003|LR|WVanIsl->NorthBc +0.012 [-0.046, 0.101] P(<=0)=0.320
+PAIRED call_AUTO|RF minus baseline003|RF|WVanIsl->NorthBc +0.048 [-0.008, 0.132] P(<=0)=0.051
+PERM call_AUTO|LR|day5fold obs 0.494 null mean 0.357 p95 0.389 max 0.434 p=0.005
+PERM call_AUTO|LR|NorthBc->WVanIsl obs 0.457 null mean 0.331 p95 0.370 max 0.406 p=0.005
+PERM call_AUTO|LR|WVanIsl->NorthBc obs 0.462 null mean 0.336 p95 0.379 max 0.395 p=0.005
+PERM call_AUTO|RF|day5fold obs 0.485 null mean 0.331 p95 0.362 max 0.387 p=0.005
+PERM call_AUTO|RF|NorthBc->WVanIsl obs 0.487 null mean 0.333 p95 0.364 max 0.410 p=0.005
+PERM call_AUTO|RF|WVanIsl->NorthBc obs 0.455 null mean 0.333 p95 0.359 max 0.380 p=0.005

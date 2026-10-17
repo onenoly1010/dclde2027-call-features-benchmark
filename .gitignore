@@ -1,0 +1,5 @@
+work/
+*.pkl
+*.flac
+*.wav
+__pycache__/
