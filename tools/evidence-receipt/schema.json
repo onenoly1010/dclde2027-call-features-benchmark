@@ -1,0 +1,374 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "evidence-receipt/1.0",
+ "title": "Evidence receipt for a computational experiment (v1.0)",
+ "type": "object",
+ "required": [
+  "receipt_format",
+  "run_id",
+  "created",
+  "claim_tested",
+  "datasets",
+  "code",
+  "environment",
+  "rerun",
+  "splits",
+  "metrics",
+  "failures_and_limits",
+  "reproduction",
+  "interpretation_note",
+  "artifacts",
+  "preregistration"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "receipt_format": {
+   "const": "evidence-receipt/1.0"
+  },
+  "run_id": {
+   "type": "string"
+  },
+  "created": {
+   "type": "string",
+   "description": "ISO 8601 with offset"
+  },
+  "claim_tested": {
+   "type": "object",
+   "required": [
+    "statement",
+    "verdict"
+   ],
+   "properties": {
+    "statement": {
+     "type": "string",
+     "description": "One falsifiable sentence"
+    },
+    "verdict": {
+     "enum": [
+      "supported",
+      "partially_supported",
+      "not_supported",
+      "inconclusive"
+     ]
+    },
+    "verdict_summary": {
+     "type": "string"
+    }
+   }
+  },
+  "datasets": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "name",
+     "source",
+     "files_manifest",
+     "n_files"
+    ],
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string",
+      "description": "DOI / bucket / licence / citation"
+     },
+     "files_manifest": {
+      "type": "object",
+      "required": [
+       "path",
+       "sha256",
+       "columns"
+      ],
+      "description": "CSV with one row per file: at least url, sha256, samplerate",
+      "properties": {
+       "path": {
+        "type": "string"
+       },
+       "sha256": {
+        "type": "string"
+       },
+       "columns": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "n_files": {
+      "type": "integer"
+     },
+     "samplerates_hz": {
+      "type": "object"
+     },
+     "annotations": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "path",
+        "sha256"
+       ]
+      }
+     },
+     "files_inline": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "url",
+        "sha256",
+        "samplerate_hz"
+       ]
+      },
+      "description": "optional; full per-file list if small"
+     }
+    }
+   }
+  },
+  "code": {
+   "type": "object",
+   "required": [
+    "scripts"
+   ],
+   "properties": {
+    "scripts": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "path",
+       "sha256"
+      ]
+     }
+    },
+    "repo": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "commit": {
+     "type": [
+      "string",
+      "null"
+     ]
+    }
+   }
+  },
+  "environment": {
+   "type": "object",
+   "required": [
+    "python",
+    "packages"
+   ],
+   "properties": {
+    "python": {
+     "type": "string"
+    },
+    "packages": {
+     "type": "object"
+    },
+    "hardware": {
+     "type": "string"
+    },
+    "seeds": {
+     "type": "array"
+    },
+    "runtime_s": {
+     "type": [
+      "number",
+      "null"
+     ]
+    }
+   }
+  },
+  "rerun": {
+   "type": "object",
+   "required": [
+    "command"
+   ],
+   "properties": {
+    "prerequisites": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "command": {
+     "type": "string"
+    },
+    "expected_outputs": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "tolerance": {
+     "type": "string"
+    }
+   }
+  },
+  "splits": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "name",
+     "train",
+     "test",
+     "grouping"
+    ]
+   }
+  },
+  "metrics": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "split",
+     "metric",
+     "value"
+    ],
+    "properties": {
+     "split": {
+      "type": "string"
+     },
+     "metric": {
+      "type": "string"
+     },
+     "model": {
+      "type": "string"
+     },
+     "value": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "ci95": {
+      "type": [
+       "array",
+       "null"
+      ]
+     },
+     "ci_method": {
+      "type": "string"
+     },
+     "floor": {
+      "type": [
+       "object",
+       "null"
+      ],
+      "description": "{name, value} of the trivial comparator"
+     },
+     "gain_vs_floor": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "gain_ci95": {
+      "type": [
+       "array",
+       "null"
+      ]
+     },
+     "p_value": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "test": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "failures_and_limits": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string"
+   }
+  },
+  "reproduction": {
+   "type": "object",
+   "required": [
+    "status",
+    "attempts"
+   ],
+   "properties": {
+    "status": {
+     "enum": [
+      "not_attempted",
+      "self_rerun_matched",
+      "self_rerun_mismatch",
+      "independent_rerun_matched",
+      "independent_rerun_mismatch"
+     ]
+    },
+    "attempts": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "by",
+       "date",
+       "outcome"
+      ]
+     }
+    }
+   }
+  },
+  "interpretation_note": {
+   "type": "string"
+  },
+  "artifacts": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "path",
+     "sha256"
+    ]
+   }
+  },
+  "preregistration": {
+   "type": "object",
+   "required": [
+    "preregistered",
+    "deviations"
+   ],
+   "properties": {
+    "preregistered": {
+     "type": "boolean"
+    },
+    "file": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "sha256": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "timing": {
+     "type": "string"
+    },
+    "deviations": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    }
+   }
+  }
+ }
+}

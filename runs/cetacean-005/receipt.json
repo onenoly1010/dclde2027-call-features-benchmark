@@ -1,0 +1,343 @@
+{
+ "receipt_format": "evidence-receipt/1.0",
+ "run_id": "cetacean-005",
+ "created": "2026-10-19T00:00:00-06:00",
+ "claim_tested": {
+  "statement": "On 300 files (203 days), call AUTO-band features classify HW vs KW beyond a trivial floor across days and both deployment directions, with day-block permutation significance.",
+  "verdict": "supported",
+  "verdict_summary": "Species bal.acc .78-.85; paired gain over trivial RF +.14 to +.31, all CIs > 0; block permutation p=.005. Ecotype weak (.46-.49, OKW poorly recognised)."
+ },
+ "datasets": [
+  {
+   "name": "DCLDE2027 DFO-CRP 300-file subset (NorthBc 150, WVanIsl 150)",
+   "source": "DCLDE 2027 killer whale dataset, DFO-CRP portion; DOI 10.25921/15ey-mh50; public bucket gs://noaa-passive-bioacoustic/dclde/2027/dclde_2027_killer_whales/; licence CC BY-SA 4.0 (README) / CC BY 4.0 (filename) - see dataset; cite Palmer et al. 2025, Sci Data",
+   "files_manifest": {
+    "path": "FILE_MANIFEST.csv",
+    "sha256": "7870e0ef8987277aa152f1d7a387004696abfb5f4e93aeff21cc0801075cd468",
+    "columns": [
+     "file",
+     "url",
+     "gcs_generation",
+     "gcs_md5",
+     "md5_ok",
+     "size_ok",
+     "sha256",
+     "bytes",
+     "samplerate",
+     "channels",
+     "duration_s",
+     "deployment",
+     "session_day",
+     "in_cetacean003"
+    ]
+   },
+   "n_files": 300,
+   "samplerates_hz": {
+    "16384": 150,
+    "16000": 150
+   },
+   "annotations": [
+    {
+     "path": "data/run005_subset/annotations_subset.csv",
+     "sha256": "23a5d17d0ddabcdc59ed9c88f8f08918d6aced71207979260cc948de906acbc5"
+    }
+   ],
+   "note": "md5 and size verified against GCS objects 300/300"
+  }
+ ],
+ "code": {
+  "scripts": [
+   {
+    "path": "runs/cetacean-005/run005.py",
+    "sha256": "646d20bccbc96bbb3fe7d315dda6886c7ca1b3b6830f7a93053d906b18d22dca"
+   },
+   {
+    "path": "code/build_annotations.py",
+    "sha256": "13a1f2de231ef5e72501c2f4a87d31821237ad904fa58b90cbbbfbe19e5bdc2e"
+   },
+   {
+    "path": "code/download_verify.py",
+    "sha256": "b858a0e682773a5bc6066b60fc95102af3854a9baa4af202eceeb7b588604665"
+   },
+   {
+    "path": "code/select_005.py",
+    "sha256": "d1b6f7e1e6da5f74f1a578586f1748752b52958ceacd895926e934431f16ba57"
+   }
+  ],
+  "repo": "https://github.com/onenoly1010/dclde2027-call-features-benchmark",
+  "commit": "c5554bc8ce08de5f9b26983e648c77ae593ab65a"
+ },
+ "environment": {
+  "python": "3.13 (venv built from requirements.lock.txt)",
+  "packages": {
+   "scikit-learn": "1.9.1",
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.0.6",
+   "soundfile": "0.14.0",
+   "librosa": "1.0.0"
+  },
+  "hardware": "box, 8 vCPU, 15 GB RAM",
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "runtime_s": null
+ },
+ "rerun": {
+  "prerequisites": [
+   "All paths in this receipt are relative to the repository root at code.commit.",
+   "git clone https://github.com/onenoly1010/dclde2027-call-features-benchmark && git checkout c5554bc8ce08de5f9b26983e648c77ae593ab65a",
+   "python3.13 on PATH; ~1.1 GB disk; network access to storage.googleapis.com",
+   "./reproduce.sh downloads + md5/sha256-verifies 300 FLAC files listed in FILE_MANIFEST.csv and builds work/venv from requirements.lock.txt"
+  ],
+  "command": "./reproduce.sh --runs \"005\"",
+  "expected_outputs": [
+   "work/out/cetacean-005/results.json",
+   "work/out/cetacean-005/table.txt"
+  ],
+  "tolerance": "exact per seed; compare work/out/cetacean-005/results.json to runs/cetacean-005/results.json"
+ },
+ "splits": [
+  {
+   "name": "day-5fold",
+   "train": "4/5 of recording days (both deployments)",
+   "test": "held-out days",
+   "grouping": "GroupKFold(5) by deployment+day"
+  },
+  {
+   "name": "N->W",
+   "train": "DFO NorthBc",
+   "test": "DFO WVanIsl",
+   "grouping": "deployment"
+  },
+  {
+   "name": "W->N",
+   "train": "DFO WVanIsl",
+   "test": "DFO NorthBc",
+   "grouping": "deployment"
+  }
+ ],
+ "metrics": [
+  {
+   "split": "day-5fold",
+   "metric": "species balanced accuracy (mean 5 seeds)",
+   "model": "call_AUTO RF",
+   "value": 0.845,
+   "ci95": [
+    0.821,
+    0.869
+   ],
+   "ci_method": "day-cluster bootstrap 95%",
+   "floor": {
+    "name": "trivial RF",
+    "value": 0.669
+   },
+   "gain_vs_floor": 0.177,
+   "gain_ci95": [
+    0.149,
+    0.206
+   ],
+   "p_value": 0.005,
+   "test": "day-block circular-shift permutation, 200 perms (min p .005)"
+  },
+  {
+   "split": "N->W",
+   "metric": "species balanced accuracy (mean 5 seeds)",
+   "model": "call_AUTO RF",
+   "value": 0.848,
+   "ci95": [
+    0.823,
+    0.871
+   ],
+   "ci_method": "day-cluster bootstrap 95%",
+   "floor": {
+    "name": "trivial RF",
+    "value": 0.54
+   },
+   "gain_vs_floor": 0.311,
+   "gain_ci95": [
+    0.279,
+    0.343
+   ],
+   "p_value": 0.005,
+   "test": "day-block circular-shift permutation, 200 perms (min p .005)"
+  },
+  {
+   "split": "W->N",
+   "metric": "species balanced accuracy (mean 5 seeds)",
+   "model": "call_AUTO RF",
+   "value": 0.787,
+   "ci95": [
+    0.735,
+    0.83
+   ],
+   "ci_method": "day-cluster bootstrap 95%",
+   "floor": {
+    "name": "trivial RF",
+    "value": 0.635
+   },
+   "gain_vs_floor": 0.149,
+   "gain_ci95": [
+    0.105,
+    0.197
+   ],
+   "p_value": 0.005,
+   "test": "day-block circular-shift permutation, 200 perms (min p .005)"
+  },
+  {
+   "split": "day-5fold",
+   "metric": "species balanced accuracy (mean 5 seeds)",
+   "model": "call_AUTO LR",
+   "value": 0.834,
+   "ci95": [
+    0.809,
+    0.86
+   ],
+   "ci_method": "day-cluster bootstrap 95%",
+   "floor": {
+    "name": "trivial RF",
+    "value": 0.669
+   },
+   "gain_vs_floor": 0.166,
+   "gain_ci95": [
+    0.135,
+    0.198
+   ],
+   "p_value": 0.005,
+   "test": "day-block circular-shift permutation, 200 perms (min p .005)"
+  },
+  {
+   "split": "N->W",
+   "metric": "species balanced accuracy (mean 5 seeds)",
+   "model": "call_AUTO LR",
+   "value": 0.844,
+   "ci95": [
+    0.815,
+    0.868
+   ],
+   "ci_method": "day-cluster bootstrap 95%",
+   "floor": {
+    "name": "trivial RF",
+    "value": 0.54
+   },
+   "gain_vs_floor": 0.306,
+   "gain_ci95": [
+    0.269,
+    0.341
+   ],
+   "p_value": 0.005,
+   "test": "day-block circular-shift permutation, 200 perms (min p .005)"
+  },
+  {
+   "split": "W->N",
+   "metric": "species balanced accuracy (mean 5 seeds)",
+   "model": "call_AUTO LR",
+   "value": 0.775,
+   "ci95": [
+    0.722,
+    0.82
+   ],
+   "ci_method": "day-cluster bootstrap 95%",
+   "floor": {
+    "name": "trivial RF",
+    "value": 0.635
+   },
+   "gain_vs_floor": 0.138,
+   "gain_ci95": [
+    0.09,
+    0.186
+   ],
+   "p_value": 0.005,
+   "test": "day-block circular-shift permutation, 200 perms (min p .005)"
+  },
+  {
+   "split": "all",
+   "metric": "ecotype balanced accuracy",
+   "model": "call_AUTO",
+   "value": null,
+   "ci95": null,
+   "ci_method": "",
+   "floor": {
+    "name": "chance",
+    "value": 0.333
+   },
+   "gain_vs_floor": null,
+   "gain_ci95": null,
+   "p_value": null,
+   "test": "range .46-.49 over splits; see results.json"
+  }
+ ],
+ "failures_and_limits": [
+  "Annotated event start/end times are used (classification of given events, not detection).",
+  "800 Hz high-pass in annotation detector under-samples low HW calls.",
+  "Only 2 deployments/2 recorders.",
+  "Permutation RF uses 100 trees vs 300 observed.",
+  "OKW recall .02-.43; ecotype gain over run-003 baseline mostly not significant."
+ ],
+ "reproduction": {
+  "status": "self_rerun_matched",
+  "attempts": [
+   {
+    "by": "author (box)",
+    "date": "2026-10-16",
+    "outcome": "box restart mid-run; resumed in new venv with checkpointing; species model numbers identical in both attempts"
+   }
+  ]
+ },
+ "preregistration": {
+  "preregistered": false,
+  "file": null,
+  "sha256": null,
+  "timing": "none",
+  "deviations": [
+   "No preregistration; analysis choices were made by the author before and during the run, and some (feature sets, comparators) were chosen after seeing earlier runs."
+  ]
+ },
+ "interpretation_note": "A matching SHA-256 shows a file is byte-identical to the one used. A matching rerun shows the computation is repeatable with these inputs. Neither shows that the scientific conclusion is correct: labels may be wrong or biased, the test sites may not represent deployment conditions, and the chosen metrics may not be the ones that matter. Treat the metrics and limits as the claim, and test them on new data.",
+ "artifacts": [
+  {
+   "path": "FILE_MANIFEST.csv",
+   "sha256": "7870e0ef8987277aa152f1d7a387004696abfb5f4e93aeff21cc0801075cd468"
+  },
+  {
+   "path": "runs/cetacean-005/RECEIPT.md",
+   "sha256": "3ae5ddfe490d72f72fea74933fc7b00af5e35b9a758c611d03a83ba9c166a623"
+  },
+  {
+   "path": "runs/cetacean-005/SHA256SUMS.original",
+   "sha256": "37765783d49e1f7ff31ca062efde74af43b4575f64b8e83692e0c790d65af573"
+  },
+  {
+   "path": "code/build_annotations.py",
+   "sha256": "13a1f2de231ef5e72501c2f4a87d31821237ad904fa58b90cbbbfbe19e5bdc2e"
+  },
+  {
+   "path": "code/download_verify.py",
+   "sha256": "b858a0e682773a5bc6066b60fc95102af3854a9baa4af202eceeb7b588604665"
+  },
+  {
+   "path": "code/select_005.py",
+   "sha256": "d1b6f7e1e6da5f74f1a578586f1748752b52958ceacd895926e934431f16ba57"
+  },
+  {
+   "path": "runs/cetacean-005/results.json",
+   "sha256": "70258da5e834bdee463ab71b89c7e139225001900fc3f503343258fc574e2bab"
+  },
+  {
+   "path": "runs/cetacean-005/run.log",
+   "sha256": "afe643ca4ea1cd487b8c7fa5e841940d00ea5b45573a2a69b67e3f0caa69a933"
+  },
+  {
+   "path": "runs/cetacean-005/run005.py",
+   "sha256": "646d20bccbc96bbb3fe7d315dda6886c7ca1b3b6830f7a93053d906b18d22dca"
+  },
+  {
+   "path": "runs/cetacean-005/table.txt",
+   "sha256": "4abc931aade9f8148eff07faf1c34589c4ba5b93c3dcb66edc38855e4184dfb4"
+  }
+ ]
+}
